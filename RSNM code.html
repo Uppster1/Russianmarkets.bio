@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Payment Request</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://russiamarket.to/resources/background/Q4FRL00aHn.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .input-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .input-box input {
+            width: 250px;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .input-box button {
+            padding: 10px 20px;
+            background-color: #0044cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .input-box button:hover {
+            background-color: #003399;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function showPaymentScreen() {
+            document.getElementById('registration-screen').classList.add('hidden');
+            document.getElementById('payment-screen').classList.remove('hidden');
+        }
+    </script>
+</head>
+<body>
+    <div id="registration-screen" class="container">
+        <h1>Create an Account</h1>
+        <div class="input-box">
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <button onclick="showPaymentScreen()">Create an Account</button>
+        </div>
+    </div>
+
+    <div id="payment-screen" class="container hidden">
+        <h1>PLEASE SUBMIT PAYMENT IN <span style="color: yellow;">BITCOIN</span></h1>
+        <p>100$ = <span style="color: yellow;">0.00103892 BTC</span></p>
+        <p>Please send <span style="color: yellow;">BTC</span> to this address:</p>
+        <p class="wallet-address">bc1qcifxlwuy8kwfr9k0j2dzzv6507erlywpmp3m3w</p>
+        <div id="globe">
+            <div class="orbit">
+                <div class="icon computer icon1"></div>
+                <div class="icon credit-card icon2"></div>
+                <div class="icon computer icon3"></div>
+                <div class="icon credit-card icon4"></div>
+            </div>
+        </div>
+        <p style="font-size: 1.5rem;">Account not activated</p>
+        <p>To activate an account, make a deposit of $100 using the suggested method.</p>
+        <p>This amount will be added to balance.</p>
+    </div>
+</body>
+</html>
